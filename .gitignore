@@ -1,0 +1,87 @@
+# Linux kernel module / driver build output
+*.o
+*.ko
+*.mod
+*.mod.c
+*.mod.o
+*.order
+*.symtypes
+*.a
+*.so
+*.cmd
+*.dwo
+*.gcno
+*.gcda
+*.dtb
+*.dtbo
+*.dtbo.S
+modules.order
+Module.symvers
+Module.markers
+System.map
+vmlinux
+vmlinux.*
+*.bin
+*.elf
+*.map
+
+# Kbuild generated directories and metadata
+.tmp_versions/
+.cache.mk
+.kernelrelease
+.missing-syscalls.d
+include/generated/
+include/config/
+arch/*/include/generated/
+arch/*/include/generated/uapi/
+
+# Generated dependency / command files
+.*.cmd
+*.o.cmd
+*.ko.cmd
+*.mod.cmd
+
+# Debug and trace output
+*.d
+*.lst
+*.su
+*.s
+*.i
+*.ii
+*.ll
+*.bc
+*.profraw
+*.profdata
+
+# Userspace test programs and local build directories
+build/
+out/
+dist/
+target/
+char_driver/user
+
+# Tags and code navigation databases
+tags
+TAGS
+cscope.*
+GTAGS
+GRTAGS
+GPATH
+compile_commands.json
+
+# Logs and runtime artifacts
+*.log
+*.pid
+*.swp
+*.swo
+*.tmp
+core
+core.*
+
+# Editor and OS files
+.vscode/
+.idea/
+*.bak
+*~
+.DS_Store
+Thumbs.db
