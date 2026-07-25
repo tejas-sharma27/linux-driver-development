@@ -3,6 +3,7 @@
 #include <linux/kthread.h>
 #include <linux/sched.h>
 #include <linux/mutex.h>
+#include <linux/delay.h>
 static struct task_struct* t1;
 static struct task_struct* t2;
 static struct task_struct* t3;
@@ -18,6 +19,7 @@ static int worker(void* data) {
     for (int i = 0; i < 1000000; i++) {
         mutex_lock(&count_lock);
         counter++;
+        msleep(100);
         mutex_unlock(&count_lock);
         cond_resched();
         

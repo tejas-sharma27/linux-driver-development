@@ -2,6 +2,7 @@
 #include <linux/init.h>
 #include <linux/kthread.h>
 #include <linux/sched.h>
+#include <linux/delay.h>
 static struct task_struct* t1;
 static struct task_struct* t2;
 static struct task_struct* t3;

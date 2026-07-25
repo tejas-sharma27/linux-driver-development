@@ -34,12 +34,13 @@ static ssize_t my_read (struct file * f, char __user *u, size_t t, loff_t * x) {
 static ssize_t my_write (struct file *f, const char __user *u, size_t t, loff_t *x) {
 	printk("Write is called");
 	if (t > sizeof(data)) {
-		t = sizeof(data);
+		t = sizeof(data)-1;
 	}
 	if (copy_from_user(data, u, t)) {
 		return -EFAULT;
 	}
 	len = t;
+	data[t] = '\0';
 	printk("Message received from user is %s.", data);
 	return t;
 }
